@@ -12,5 +12,5 @@ const handler = NextAuth({
 });
 
 // Allows both GET and POST requests to be handled by NextAuth
-// "/api/auth" becomes an authentication route for login, logout, etc
+// "/api/auth" becomes an authentication route for signin, sign out, etc
 export { handler as GET, handler as POST };

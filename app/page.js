@@ -24,9 +24,9 @@ export default function Home() {
   const { userLocation, setUserLocation } = useContext(UserLocationContext);
 
   useEffect(() => {
-    // If user is not logged in, redirect them to the login page
+    // If user is not logged in, redirect them to the signin page
     if (!session?.user) {
-      router.replace("/login");
+      router.replace("/signin");
     }
   }, [session]);
 
@@ -130,7 +130,7 @@ export default function Home() {
         </div>
       ) : (
         <div className="flex justify-center items-center h-screen">
-          <p>Redirecting to login...</p>
+          <p>Redirecting to signin...</p>
         </div>
       )}
     </>

@@ -5,14 +5,14 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 
-const Login = () => {
+const Signin = () => {
   const { data: session } = useSession(); // Uses the useSession hook to get the current session data
   const router = useRouter(); // Uses the useRouter hook to get the router object
 
   useEffect(() => {
     // If user is already logged in, redirect them to the root url
     if (session?.user) {
-      router.push("/");
+      router.replace("/");
     }
   }, [session]);
 
@@ -49,10 +49,10 @@ const Login = () => {
             d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917"
           />
         </svg>
-        Sign up with Google
+        Sign in with Google
       </button>
     </div>
   );
 };
 
-export default Login;
+export default Signin;
